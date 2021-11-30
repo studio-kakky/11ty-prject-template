@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-size: 16px;
+  font-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s;
+  &:hover {
+    color: rgb(238, 132, 119);
+  }
+}

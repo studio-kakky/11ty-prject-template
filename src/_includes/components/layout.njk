@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>{{ pageTitle }}</title>
+    <link rel="stylesheet" href="{{ cssPath }}" />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap'
+      rel='stylesheet'
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    {% include 'components/common/header.njk' %}
+    {{ content | safe }}
+    {% include 'components/common/footer.njk' %}
+  </body>
+</html>
