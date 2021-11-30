@@ -4,7 +4,7 @@ const { sassPlugin } = require('esbuild-sass-plugin');
 module.exports = function (eleventyConfig) {
   eleventyConfig.on('afterBuild', () => {
     return esbuild.build({
-      entryPoints: ['src/style/styles.scss'],
+      entryPoints: ['src/scripts/main.js', 'src/style/styles.scss'],
       bundle: true,
       outdir: '_site/',
       platform: 'browser',
@@ -21,6 +21,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy('src/assets/images');
   eleventyConfig.addWatchTarget('./src/style');
+  eleventyConfig.addWatchTarget('./src/scripts');
   eleventyConfig.setBrowserSyncConfig({
     port: 5000,
   });
